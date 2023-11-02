@@ -192,7 +192,7 @@ class TestLineaFacturaDAO {
 	@Test
 	@Order(1)
 	void testSize() {
-		int respuestaObtenida = capaDao.size();
+		long respuestaObtenida = capaDao.size();
 		assertEquals(-1, respuestaObtenida);
 	}
 

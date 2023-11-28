@@ -184,14 +184,14 @@ class TestLineaFacturaDAO {
 			assertTrue(respuestaObtenida);
 			respuestaObtenida = capaDao.delete(registroNoExiste);
 			assertFalse(respuestaObtenida);
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			fail("El testdelete falla" + e.getMessage());
 		}
 	}
 
 	@Test
 	@Order(1)
-	void testSize() {
+	void testSize() throws SQLException {
 		long respuestaObtenida = capaDao.size();
 		assertEquals(-1, respuestaObtenida);
 	}
